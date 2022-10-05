@@ -8,12 +8,12 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        Integer[] data = {1,1,1,1,1,2,2,3,4,5,6,9,4,6,7};
+        String[] data = {"Eduardo","Eduardo","Eduardo","Eduardo","Eduardo","Willy","Willy","Willy","Willy","Dani","Dani","Pepe","Dani","Eva","Eva"};
         Histogram histo = new Histogram(data);
         
-        Map<Integer,Integer> histogr = histo.getHistogram();
+        Map<String,Integer> histogr = histo.getHistogram();
         
-        for (Integer key : histogr.keySet()) {
+        for (String key : histogr.keySet()) {
             System.out.println(key + "==>"+ histogr.get(key));
         }
     }
