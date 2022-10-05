@@ -8,14 +8,16 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        int[] data = {1,2,3,3,2,3,5,4,6,6,7,6,8,-4,5};
-        Map<Integer, Integer> histogram = new HashMap<Integer, Integer>();
-        for (int key : data) {
-           histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }   
+        int[] data = {1,1,1,1,1,2,2,3,4,5,6,9,4,6,7};
+        Histogram histo = new Histogram(data);
         
-        for (Integer key : histogram.keySet()) {
-            System.out.println(key + "==>"+ histogram.get(key));
+        Map<Integer,Integer> histogr = histo.getHistogram();
+        
+        for (Integer key : histogr.keySet()) {
+            System.out.println(key + "==>"+ histogr.get(key));
         }
     }
+    
+    
+    
 }
